@@ -408,6 +408,18 @@ footer{
 
 @media(max-width: 720px) 
 {
+    header {
+        grid-auto-rows: minmax(20px, 50px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "nbt hom abt" 
+        " .  prt cot";
+    }
+
+    .home, .about, .product, .contact{
+        justify-items: left;
+    }
+
     #rat {
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas:

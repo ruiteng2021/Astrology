@@ -129,7 +129,7 @@ header {
     grid-area: log;
     grid-auto-rows: minmax(100px, auto);
     background-image: linear-gradient(to right, #333 , white);
-     
+    justify-items: center;
 }
 
 #logo > img {

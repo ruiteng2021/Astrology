@@ -395,8 +395,104 @@ header {
 .topPig    { background-image: url('../assets/images/pig.jpg');  opacity:0.9; }
 .bottomPig { background-image: url('../assets/images/pig1.jpg');     opacity:0.9; }
 
+
+
+
+
 footer{
     display: grid;
     grid-area: ftr;
     background: #ccf;
+}
+
+
+@media(max-width: 720px) 
+{
+    #rat {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+           " pic "
+           "  .  "
+           " con ";
+    }
+
+    #ox {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    
+    #tiger {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #rabbit {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #dragon {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #snake {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #horse {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #goat {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #monkey {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #rooster {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #dog {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    #pig {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            " pic "
+            "  .  "
+            " con ";
+    }
+    
 }

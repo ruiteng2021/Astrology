@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Chinese Astrology</title>
+</head>
+<body>
+    <div id="grid">
+        <header>
+            <a class="home" href="#">Home</a>
+            <a class="about" href="#">Zodiac</a>
+            <a class="product" href="#">Calendar</a>
+            <a class="contact" href="#">Q&A</a>
+
+            <div id="navBtn" onclick="ToggleNav();">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>  
+        </header>
+        <div id="logo">
+            <img id="logoimg" src="assets/images/logo.png" alt="logo">
+        </div>
+        <div id="rat">
+            <div class="content">
+                <h1>Rat</h1>
+                <p>In China, the rat is a veneered symbol of good luck and wealth, 
+                    unlike her western gutter-dwelling counterpart. </br>
+                    But in both east and west, Rats are most often behind the scenes, 
+                    curiously observing and then taking opportunities that come their way.  </br> </br>
+                    Characteristically, Rats are ingenious at overcoming adversity and you 
+                    are skilled at using your charm and persuasive  </br>
+                    powers to ensure your own goals are met without ever seeming manipulative. </br>
+                    Rats love socialising, and you are at your happiest surrounded by your close-knit clan. 
+                    To those in your pack you are generous and fiercely loyal, but you are often defensive 
+                    and uptight with outsiders.  </br> </br>
+                    Professionally, you detest bureaucracy and tight deadlines reduce you to despair. 
+                    Luckily, you can usually charm your way around such limitations and your 
+                    lucky streak generally ensures good fortune finds you. </br> </br>
+                    In love, Rats are adventurous pleasure-seekers and monotony is your worst fear. 
+                    The most compatible match for a Rat is the Dragon or the Monkey.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeRat grab" onclick="moveCube(0)">
+                        <div class="cubeSurface frontRat front"></div>
+                        <div class="cubeSurface backRat back"></div>
+                        <div class="cubeSurface rightRat right"></div>
+                        <div class="cubeSurface leftRat left"></div>
+                        <div class="cubeSurface topRat top"></div>
+                        <div class="cubeSurface bottomRat bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        
+        <div id="ox">
+            <div class="content">
+                <h1>Ox</h1>
+                <p>
+                    The Chinese Ox is sturdy and steadfast, a born leader and a great 
+                    practical thinker. You are ruled by your head and achieve through hard graft. </br>
+                    Unlike the western image of a bull in a china shop, the Chinese Ox is more 
+                    refined, and you have a fine eye for the smaller details. </br></br>
+                    Oxen are honorable creatures and, although you can be dogmatic and 
+                    traditional in your approach to situations, you have a strong moral code. 
+                    You do not respond well to change and can tend to be obstructive if 
+                    others force situations upon you. </br></br>
+                    You are loyal and protective of those dearest to you and would rather 
+                    work out problems in private, even if that takes time, than move on to new pastures.</br></br>
+                    The most compatible match for an Ox is the Snake or the Rooster.
+                </p>
+            </div>
+            <div class="picture">
+                 <div class="scene">
+                    <div class="cubeOx grab" onclick="moveCube(1)">
+                        <div class="cubeSurface frontOx front"></div>
+                        <div class="cubeSurface backOx back"></div>
+                        <div class="cubeSurface rightOx right"></div>
+                        <div class="cubeSurface leftOx left"></div>
+                        <div class="cubeSurface topOx top"></div>
+                        <div class="cubeSurface bottomOx bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="tiger">
+            <div class="content">
+                <h1>Tiger</h1>
+                <p>
+                    The Chinese Tiger is a magnetic creature and few animals can resist your raw, 
+                    seductive appeal when you’re on the prowl.</br>
+                    Although the Tiger is not the King of the Jungle, you are most certainly 
+                    Queen of all you survey and your authoritative manner generally ensures 
+                    that you stay in control. You don’t deal with failure well, though, and 
+                    demonstrate a fiery temper if challenged. </br></br>
+                    Tigers are smart and inventive in business, and you’re very good at 
+                    taking the initiative and winning. </br></br>
+                    While you are a powerful force to be reckoned with sexually, 
+                    snaring your prey with your seductive charms, you hate being 
+                    caged yourself and retreat if you sense an emotional trap. </br></br>
+                    The most compatible match for a Tiger is a Horse or a Dog.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeTiger grab" onclick="moveCube(2)">
+                        <div class="cubeSurface frontTiger front"></div>
+                        <div class="cubeSurface backTiger back"></div>
+                        <div class="cubeSurface rightTiger right"></div>
+                        <div class="cubeSurface leftTiger left"></div>
+                        <div class="cubeSurface topTiger top"></div>
+                        <div class="cubeSurface bottomTiger bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="rabbit">
+            <div class="content">
+                <h1>Rabbit</h1>
+                <p>
+                    The Chinese Rabbit is popular for its warm nature and sensitivity. 
+                    Vulnerable creatures, Bunny Girls need love and protection to thrive. </br></br>
+                    As a Rabbit, you feel most comfortable in the hub of a large group 
+                    of close friends or family. You don’t deal well with isolation or 
+                    loneliness and depend on others for emotional support and validation.</br></br>
+                    Bunnies are incapable of fighting alone, so tend to bolt if faced 
+                    with problems or arguments. Sometimes, even minor decision-making 
+                    can be traumatic for poor Rabbits. </br></br>
+                    Rabbits have keen senses of smell but this goes beyond the physical 
+                    – you are extremely sensitive to people and situations and your 
+                    intuition is seldom wrong. Many Rabbits are also psychically gifted.</br></br>
+                    The Rabbit is most compatible with the Goat or the Pig.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeRabbit grab" onclick="moveCube(3)">
+                        <div class="cubeSurface frontRabbit front"></div>
+                        <div class="cubeSurface backRabbit back"></div>
+                        <div class="cubeSurface rightRabbit right"></div>
+                        <div class="cubeSurface leftRabbit left"></div>
+                        <div class="cubeSurface topRabbit top"></div>
+                        <div class="cubeSurface bottomRabbit bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="dragon">
+            <div class="content">
+                <h1>Dragon</h1>
+                <p>
+                    The Chinese Dragon is one of the most powerful of all the animals, 
+                    using its fiery energy to achieve greatness. </br></br>
+                    You dragons are charismatic creatures and breathe warmth and 
+                    energy into all that you do. This makes you infectiously charming 
+                    and generally popular. You love to be in charge and spark enthusiasm 
+                    in others for whatever project you’re working on. </br></br>
+                    You can be self-important, however, and your impatient streak can mean
+                     you live up to your name. </br></br>
+                     With all that fire, dragons are passionate and sexy and blessed with 
+                     a great deal of luck in love. You’re hot on emotions and get frustrated 
+                     by those who take a cooler approach than you. </br></br>
+                     Dragons are champions of the weak and, even though you can be 
+                     insensitive to those who don’t do things your way, you’re quick to rise 
+                     to the defence of more timid animals. </br></br>
+                     The most compatible match for a Dragon is the Snake or the Rat.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeDragon grab" onclick="moveCube(4)">
+                        <div class="cubeSurface frontDragon front"></div>
+                        <div class="cubeSurface backDragon back"></div>
+                        <div class="cubeSurface rightDragon right"></div>
+                        <div class="cubeSurface leftDragon left"></div>
+                        <div class="cubeSurface topDragon top"></div>
+                        <div class="cubeSurface bottomDragon bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="snake">
+            <div class="content">
+                <h1>Snake</h1>
+                <p>
+                    The Chinese Snake is the most seductive animal of the zodiac, 
+                    oozing sensual power with an air of mystery. </br></br>
+                    Snakes tend to be extravagant creatures and love beautiful 
+                    clothes and possessions. Luckily, you have a stout financial mind 
+                    so you are gifted at making your money go a long way. </br></br>
+                    Although the Chinese Snake is not as sly as the western stereotype, 
+                    you do enjoy being party to a good bit of gossip and you are very 
+                    skilful at eliciting people’s secret confidences. </br></br>
+                    Snakes have a deep-rooted scepticism and jealousy and distrust 
+                    can mar your relationships if you don’t loosen the reins of control 
+                    occasionally. </br></br>
+                    The most compatible match for a Snake is the stylish Rooster or the stalwart Ox.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeSnake grab" onclick="moveCube(5)">
+                        <div class="cubeSurface frontSnake front"></div>
+                        <div class="cubeSurface backSnake back"></div>
+                        <div class="cubeSurface rightSnake right"></div>
+                        <div class="cubeSurface leftSnake left"></div>
+                        <div class="cubeSurface topSnake top"></div>
+                        <div class="cubeSurface bottomSnake bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="horse">
+            <div class="content">
+                <h1>Horse</h1>
+                <p>
+                    The Chinese Horse is a true thoroughbred – naturally elegant 
+                    and graceful, but with an untameable wild and tempestuous streak. </br></br>
+                    Horses prize their independence and have an unquenchable passion 
+                    for travel. You therefore tend towards a minimalistic way of life 
+                    with few material possessions as you prefer to be free to follow your 
+                    flights of fancy. </br></br>
+                    Horses are pioneering spirits and are often the first to discover 
+                    new territory. You thrive in less disciplined environments where 
+                    you are free to explore your own methods of doing things. </br></br>
+                    Your wild temperament means you hunger for physical intimacy and 
+                    closeness, yet you are afraid of being emotionally fettered. 
+                    You love the buzz of new faces, places and hot gossip. </br></br>
+                    The most compatible match for the Horse is the Dog or the Tiger.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeHorse grab" onclick="moveCube(6)">
+                        <div class="cubeSurface frontHorse front"></div>
+                        <div class="cubeSurface backHorse back"></div>
+                        <div class="cubeSurface rightHorse right"></div>
+                        <div class="cubeSurface leftHorse left"></div>
+                        <div class="cubeSurface topHorse top"></div>
+                        <div class="cubeSurface bottomHorse bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="goat">
+            <div class="content">
+                <h1>Goat</h1>
+                <p>
+                    The Chinese Goat is an independent, introspective creature, 
+                    preferring the interior world of its own imagination to the drudgery 
+                    of the materialistic world. </br></br>
+                    Goats are hugely creative, great lovers of tranquillity and beautiful 
+                    places. In fact, you love nothing better than time to yourself to 
+                    indulge your daydreaming. Any kind of monotonous reality gets you 
+                    down and you are at your best when allowed to experiment with your t
+                    ypically non-linear approach. </br></br>
+                    Although you are largely unmaterialistic and you shun power or 
+                    responsibility, you enjoy luxury and like to have the means to 
+                    be generous to those you love. </br></br>
+                    You detest emotional scenes and public shows of affection and keep 
+                    your personal life and your feelings close to your chest. 
+                    But your imaginative streak extends to the bedroom and you’re 
+                    certainly not as sheepish as you initially appear. </br></br>
+                    Goats are most compatible with Pigs or Rabbits.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeSheep grab" onclick="moveCube(7)">
+                        <div class="cubeSurface frontSheep front"></div>
+                        <div class="cubeSurface backSheep back"></div>
+                        <div class="cubeSurface rightSheep right"></div>
+                        <div class="cubeSurface leftSheep left"></div>
+                        <div class="cubeSurface topSheep top"></div>
+                        <div class="cubeSurface bottomSheep bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="monkey">
+            <div class="content">
+                <h1>Monkey</h1>
+                <p>
+                    True to your name, the Chinese Monkey is a cheeky creature, 
+                    the joker in the pack. Popular and sociable, you’re where the party’s at. </br></br>
+                    Your great energy allows you to swing from group to group and you 
+                    like to keep up with a wide selection of friends rather than a 
+                    close group of intimates, not least because of your love of gossip! 
+                    You’re great at lightening the mood and you laugh in the face of adversity, 
+                    but sometimes you don’t know when the joke’s over and it’s time to be serious. </br></br>
+                    The Monkey is an ingenious animal and you’re quick to master complicated 
+                    theories and use your lateral thinking to get around obstacles. </br></br>
+                    In love, the Monkey hates commitment and you rebel against anything 
+                    or anyone who tries to compromise your independence. If you feel 
+                    trapped emotionally, you are likely to be unfaithful. </br></br>
+                    Monkeys are most compatible with Rats or Dragons.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeMonkey grab" onclick="moveCube(8)">
+                        <div class="cubeSurface frontMonkey front"></div>
+                        <div class="cubeSurface backMonkey back"></div>
+                        <div class="cubeSurface rightMonkey right"></div>
+                        <div class="cubeSurface leftMonkey left"></div>
+                        <div class="cubeSurface topMonkey top"></div>
+                        <div class="cubeSurface bottomMonkey bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="rooster">
+            <div class="content">
+                <h1>Rooster</h1>
+                <p>
+                    The most stylish animal in the Chinese Zodiac, Roosters are very 
+                    visual. The Rooster delights in material goods and aesthetic perfection. </br></br>
+                    As a Rooster, you’re a calm customer and you don’t like to ruffle your 
+                    feathers unnecessarily. You spend too much time preening to lose your 
+                    composure in public. That said, you can be theatrical and over-dramatic
+                    if the perfect world you strive for is threatened. </br></br>
+                    Combined with your keen eye for detail, your love of 
+                    wealth and material possessions means you are likely to spend 
+                    a great deal of time and investment on perfecting your dream home. </br></br>
+                    Naturally, you like to rule the roost and, despite your love of 
+                    physical beauty, will prefer a more subdued mate who will be content 
+                    to bask in your limelight. </br></br>
+                    The most compatible match for a Rooster is the Snake or the Ox
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeRooster grab" onclick="moveCube(9)">
+                        <div class="cubeSurface frontRooster front"></div>
+                        <div class="cubeSurface backRooster back"></div>
+                        <div class="cubeSurface rightRooster right"></div>
+                        <div class="cubeSurface leftRooster left"></div>
+                        <div class="cubeSurface topRooster top"></div>
+                        <div class="cubeSurface bottomRooster bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div id="dog">
+            <div class="content">
+                <h1>Dog</h1>
+                <p>
+                    The Chinese Dog is as loyal as his western counterpart 
+                    but can have a sharp bite and a determined bark. </br></br>
+                    Dogs love to please those they love, even if this involves 
+                    bending the truth ever so slightly to keep the peace. 
+                    And if your cover is blown, you Dogs hang on to your 
+                    new version of events like a juicy bone, digging yourselves 
+                    further and further into trouble. </br></br>
+                    On the other hand, however, you hate superficiality or deceit 
+                    in others. This, combined with your own underlying emotional 
+                    insecurity, means you guard your feelings closely and are wary 
+                    of new people. You prefer to stick to your pack and those who 
+                    have earned your trust. </br></br>
+                    Dogs are sticklers for issues and are swift to judge those 
+                    they see as unethical. You will fiercely protect your 
+                    values and stand your ground against anyone who attacks your beliefs. </br></br>
+                    Dogs are most compatible with Tigers or Horses.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubeDog grab" onclick="moveCube(10)">
+                        <div class="cubeSurface frontDog front"></div>
+                        <div class="cubeSurface backDog back"></div>
+                        <div class="cubeSurface rightDog right"></div>
+                        <div class="cubeSurface leftDog left"></div>
+                        <div class="cubeSurface topDog top"></div>
+                        <div class="cubeSurface bottomDog bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        
+        <div id="pig">
+            <div class="content">
+                <h1>Pig</h1>
+                <p>
+                    The Chinese Pig is the most honorable animal of the zodiac. 
+                    Gentle and home-loving, Pigs are generous and indulgent by nature. </br></br>
+                    Unlike the typical view of the Pig, the Chinese Pig is known for 
+                    its impeccable manners, exquisite taste and gentle disposition. </br></br>
+                    You Pigs love comfort and prefer to indulge in a luxurious home 
+                    than in going out. Subsequently, you spend more time with close 
+                    friends and family than in wider social circles. </br></br>
+                    You hate emotional uncertainty but Pigs are incapable of making 
+                    hard decisions so you often end up putting up with relationships 
+                    that don’t entirely satisfy you. You would still rather be with 
+                    an unsuitable partner than be alone as one of your greatest fears is isolation. </br></br>
+                    The most compatible match for a Pig is a Rabbit or a Goat.
+                </p>
+            </div>
+            <div class="picture">
+                <div class="scene">
+                    <div class="cubePig grab" onclick="moveCube(11)">
+                        <div class="cubeSurface frontPig front"></div>
+                        <div class="cubeSurface backPig back"></div>
+                        <div class="cubeSurface rightPig right"></div>
+                        <div class="cubeSurface leftPig left"></div>
+                        <div class="cubeSurface topPig top"></div>
+                        <div class="cubeSurface bottomPig bottom"></div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>

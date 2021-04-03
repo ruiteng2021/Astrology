@@ -1,0 +1,402 @@
+
+body {
+    background: #fff;
+    margin: 0;
+    width: 100%;
+    font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+}
+#grid {
+    display: grid;
+    background: #fff;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(25px, auto);
+    grid-template-areas:
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  hdr hdr hdr hdr hdr hdr hdr log log log  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  rat rat rat rat rat rat rat rat rat rat  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "   
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  oxe oxe oxe oxe oxe oxe oxe oxe oxe oxe  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "   
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  tig tig tig tig tig tig tig tig tig tig  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .   .   .   .   .   .   .   .   .   .   .   . " 
+        " .  rab rab rab rab rab rab rab rab rab rab  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . " 
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .  drg drg drg drg drg drg drg drg drg drg  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . " 
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .  sna sna sna sna sna sna sna sna sna sna  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . " 
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .  hor hor hor hor hor hor hor hor hor hor  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .   .   .   .   .   .   .   .   .   .   .   . " 
+        " .  she she she she she she she she she she  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .   .   .   .   .   .   .   .   .   .   .   . "  
+        " .  mon mon mon mon mon mon mon mon mon mon  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  roo roo roo roo roo roo roo roo roo roo  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  dog dog dog dog dog dog dog dog dog dog  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  pig pig pig pig pig pig pig pig pig pig  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
+        " .  ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr  . "
+        " .  ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr  . ";
+}
+
+header {
+    display: grid;
+    grid-area: hdr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+    "nbt . hom . abt . prt . cot .";
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    background: #333;
+}
+
+.home{
+    display: grid;
+    grid-area: hom;
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    align-content: center;
+    min-width: 50px;
+}
+.about{
+    display: grid;
+    grid-area: abt;
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    align-content: center;
+    min-width: 50px;
+}
+.product{
+    display: grid;
+    grid-area: prt;
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    align-content: center;
+    min-width: 50px;
+}
+.contact{
+    display: grid;
+    grid-area: cot;
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    align-content: center;
+    min-width: 50px;
+}
+
+
+@keyframes slideInFromLeft {
+    0%      { transform: translateX(-100%); }
+    100%    { transform: translateX(0);   }
+}
+  
+#navBtn {
+    display: grid;
+    grid-area: nbt;
+    width: 60px;
+    padding: 9px; 
+    align-content: center;
+}
+    .line {
+        width: 35px;
+        height: 3px;
+        margin: 4px;
+        background: #FFF;
+    }
+
+#logo {
+    display: grid;
+    grid-area: log;
+    grid-auto-rows: minmax(100px, auto);
+    background-image: linear-gradient(to right, #333 , white);
+     
+}
+
+#logo > img {
+    max-width: 100px;
+    height: auto;
+    min-width: 70px;
+    position: absolute;
+    transition: all 1s ease;
+    animation: 
+        moveLeftToRight 5s linear 1,
+        logo-rotate 1s linear 5;
+}
+
+/* #logo > img:hover{
+    animation: logo-rotateZ 2s linear infinite;
+} */
+
+@keyframes logo-rotate {
+    from    { transform: rotate(0); }
+    to      { transform: rotate(360deg); }
+}
+
+@keyframes logo-rotateZ {
+    from    { transform: rotateZ(0); }
+    to      { transform: rotateZ(360deg); }
+}
+
+@keyframes moveLeftToRight {
+    0%   { left: -100px; }
+    100% { left: 80%; }
+}
+
+#rat {
+    display: grid;
+    grid-area: rat;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+
+#ox {
+    display: grid;
+    grid-area: oxe;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+
+#tiger {
+    display: grid;
+    grid-area: tig;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+#rabbit {
+    display: grid;
+    grid-area: rab;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+#dragon {
+    display: grid;
+    grid-area: drg;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+#snake {
+    display: grid;
+    grid-area: sna;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+#horse {
+    display: grid;
+    grid-area: hor;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+#goat {
+    display: grid;
+    grid-area: she;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+#monkey {
+    display: grid;
+    grid-area: mon;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+#rooster {
+    display: grid;
+    grid-area: roo;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+#dog {
+    display: grid;
+    grid-area: dog;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+       " pic . con con con ";
+}
+#pig {
+    display: grid;
+    grid-area: pig;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        " con con con . pic ";
+}
+
+.picture{
+    display: grid;
+    grid-area: pic;
+}
+
+.content{
+    display: grid;
+    grid-area: con;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.scene {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    perspective: 400px;
+}
+  
+.cubeRat,.cubeOx,.cubeTiger,
+.cubeRabbit,.cubeDragon,.cubeSnake,
+.cubeHorse,.cubeSheep,.cubeMonkey,
+.cubeRooster,.cubeDog,.cubePig {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+}
+  
+.cubeSurface {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+  
+  /* presetting position for all cubs */
+.front  { transform: rotateY(  0deg) translateZ(100px); }
+.right  { transform: rotateY( 90deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX( 90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.grab {cursor: pointer;}
+
+  
+/* rat background setting */
+.frontRat  { background-image: url('../assets/images/rat2.jpg');  opacity:0.9; }
+.rightRat  { background-image: url('../assets/images/rat3.jpg');  opacity:0.9; }
+.backRat   { background-image: url('../assets/images/rat4.jpg');  opacity:0.9; }
+.leftRat   { background-image: url('../assets/images/rat5.jpg');  opacity:0.9; }
+.topRat    { background-image: url('../assets/images/rat.jpg');  opacity:0.9; }
+.bottomRat { background-image: url('../assets/images/rat1.jpg');     opacity:0.9; }
+
+.frontOx  { background-image: url('../assets/images/ox2.jpg');  opacity:0.9; }
+.rightOx  { background-image: url('../assets/images/ox3.jpg');  opacity:0.9; }
+.backOx   { background-image: url('../assets/images/ox4.jpg');  opacity:0.9; }
+.leftOx   { background-image: url('../assets/images/ox5.jpg');  opacity:0.9; }
+.topOx    { background-image: url('../assets/images/ox.jpg');  opacity:0.9; }
+.bottomOx { background-image: url('../assets/images/ox1.jpg');     opacity:0.9; }
+
+.frontTiger  { background-image: url('../assets/images/tiger2.jpg');  opacity:0.9; }
+.rightTiger  { background-image: url('../assets/images/tiger3.jpg');  opacity:0.9; }
+.backTiger   { background-image: url('../assets/images/tiger4.jpg');  opacity:0.9; }
+.leftTiger   { background-image: url('../assets/images/tiger5.jpg');  opacity:0.9; }
+.topTiger    { background-image: url('../assets/images/tiger.jpg');  opacity:0.9; }
+.bottomTiger { background-image: url('../assets/images/tiger1.jpg');     opacity:0.9; }
+
+.frontRabbit  { background-image: url('../assets/images/rabbit2.jpg');  opacity:0.9; }
+.rightRabbit  { background-image: url('../assets/images/rabbit3.jpg');  opacity:0.9; }
+.backRabbit   { background-image: url('../assets/images/rabbit4.jpg');  opacity:0.9; }
+.leftRabbit   { background-image: url('../assets/images/rabbit5.jpg');  opacity:0.9; }
+.topRabbit    { background-image: url('../assets/images/rabbit.jpg');  opacity:0.9; }
+.bottomRabbit { background-image: url('../assets/images/rabbit1.jpg');     opacity:0.9; }
+
+.frontDragon  { background-image: url('../assets/images/dragon2.jpg');  opacity:0.9; }
+.rightDragon  { background-image: url('../assets/images/dragon3.jpg');  opacity:0.9; }
+.backDragon   { background-image: url('../assets/images/dragon4.jpg');  opacity:0.9; }
+.leftDragon   { background-image: url('../assets/images/dragon5.jpg');  opacity:0.9; }
+.topDragon    { background-image: url('../assets/images/dragon.jpg');  opacity:0.9; }
+.bottomDragon { background-image: url('../assets/images/dragon1.jpg');     opacity:0.9; }
+
+.frontSnake  { background-image: url('../assets/images/snake2.jpg');  opacity:0.9; }
+.rightSnake  { background-image: url('../assets/images/snake3.jpg');  opacity:0.9; }
+.backSnake   { background-image: url('../assets/images/snake4.jpg');  opacity:0.9; }
+.leftSnake   { background-image: url('../assets/images/snake5.jpg');  opacity:0.9; }
+.topSnake    { background-image: url('../assets/images/snake.jpg');  opacity:0.9; }
+.bottomSnake { background-image: url('../assets/images/snake1.jpg');     opacity:0.9; }
+
+.frontHorse  { background-image: url('../assets/images/horse2.jpg');  opacity:0.9; }
+.rightHorse  { background-image: url('../assets/images/horse3.jpg');  opacity:0.9; }
+.backHorse   { background-image: url('../assets/images/horse4.jpg');  opacity:0.9; }
+.leftHorse   { background-image: url('../assets/images/horse5.jpg');  opacity:0.9; }
+.topHorse    { background-image: url('../assets/images/horse.jpg');  opacity:0.9; }
+.bottomHorse { background-image: url('../assets/images/horse1.jpg');     opacity:0.9; }
+
+.frontSheep  { background-image: url('../assets/images/sheep2.jpg');  opacity:0.9; }
+.rightSheep  { background-image: url('../assets/images/sheep3.jpg');  opacity:0.9; }
+.backSheep   { background-image: url('../assets/images/sheep4.jpg');  opacity:0.9; }
+.leftSheep   { background-image: url('../assets/images/sheep5.jpg');  opacity:0.9; }
+.topSheep    { background-image: url('../assets/images/sheep.jpg');  opacity:0.9; }
+.bottomSheep { background-image: url('../assets/images/sheep1.jpg');     opacity:0.9; }
+
+.frontMonkey  { background-image: url('../assets/images/monkey2.jpg');  opacity:0.9; }
+.rightMonkey  { background-image: url('../assets/images/monkey3.jpg');  opacity:0.9; }
+.backMonkey   { background-image: url('../assets/images/monkey4.jpg');  opacity:0.9; }
+.leftMonkey   { background-image: url('../assets/images/monkey5.jpg');  opacity:0.9; }
+.topMonkey    { background-image: url('../assets/images/monkey.jpg');  opacity:0.9; }
+.bottomMonkey { background-image: url('../assets/images/monkey1.jpg');     opacity:0.9; }
+
+.frontRooster  { background-image: url('../assets/images/rooster2.jpg');  opacity:0.9; }
+.rightRooster  { background-image: url('../assets/images/rooster3.jpg');  opacity:0.9; }
+.backRooster   { background-image: url('../assets/images/rooster4.jpg');  opacity:0.9; }
+.leftRooster   { background-image: url('../assets/images/rooster5.jpg');  opacity:0.9; }
+.topRooster    { background-image: url('../assets/images/rooster.jpg');  opacity:0.9; }
+.bottomRooster { background-image: url('../assets/images/rooster1.jpg');     opacity:0.9; }
+
+.frontDog  { background-image: url('../assets/images/dog2.jpg');  opacity:0.9; }
+.rightDog  { background-image: url('../assets/images/dog3.jpg');  opacity:0.9; }
+.backDog   { background-image: url('../assets/images/dog4.jpg');  opacity:0.9; }
+.leftDog   { background-image: url('../assets/images/dog5.jpg');  opacity:0.9; }
+.topDog    { background-image: url('../assets/images/dog.jpg');  opacity:0.9; }
+.bottomDog { background-image: url('../assets/images/dog1.jpg');     opacity:0.9; }
+
+.frontPig  { background-image: url('../assets/images/pig2.jpg');  opacity:0.9; }
+.rightPig  { background-image: url('../assets/images/pig3.jpg');  opacity:0.9; }
+.backPig   { background-image: url('../assets/images/pig4.jpg');  opacity:0.9; }
+.leftPig   { background-image: url('../assets/images/pig5.jpg');  opacity:0.9; }
+.topPig    { background-image: url('../assets/images/pig.jpg');  opacity:0.9; }
+.bottomPig { background-image: url('../assets/images/pig1.jpg');     opacity:0.9; }
+
+footer{
+    display: grid;
+    grid-area: ftr;
+    background: #ccf;
+}

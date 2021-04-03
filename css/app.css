@@ -418,7 +418,7 @@ footer{
     }
 
     .home, .about, .product, .contact{
-        justify-items: center;
+        justify-items: left;
     }
 
     #navBtn {

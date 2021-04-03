@@ -63,9 +63,9 @@ function ToggleNav(){
     if(isOpen) { // close the nav bar
         $('header').attr('style','width: 65px; transition: width 2s;');
         $('.home').attr('style','visibility: hidden; transition-delay: 1s;');
-        $('.about').attr('style','visibility: hidden; transition-delay: 0.6s;');
-        $('.product').attr('style','visibility: hidden; transition-delay: 0.4s;');
-        $('.contact').attr('style','visibility: hidden; transition-delay: 0.2s;');
+        $('.zodiac').attr('style','visibility: hidden; transition-delay: 0.6s;');
+        $('.calendar').attr('style','visibility: hidden; transition-delay: 0.4s;');
+        $('.qa').attr('style','visibility: hidden; transition-delay: 0.2s;');
         //$('#navBtn').attr('style', 'transform: translateX(-10px) translateY(10px) rotate(90deg); transition: transform .42s;');
         $(lines[0]).attr('style', 'transform: translateX(-10px) translateY(10px) rotate(90deg); transition: transform .42s;');
         $(lines[1]).attr('style', 'transform: translateX(0px) translateY(-1px) rotate(90deg); transition: transform 1s;');
@@ -74,9 +74,9 @@ function ToggleNav(){
     else { // open the nav bar
         $('header').attr('style','width: 100%; transition: width 2s;');
         $('.home').attr('style','visibility: visible; transition-delay: 0.5s;');
-        $('.about').attr('style','visibility: visible; transition-delay: 0.7s;');
-        $('.product').attr('style','visibility: visible; transition-delay: 0.9s;');
-        $('.contact').attr('style','visibility: visible; transition-delay: 1.2s;');
+        $('.zodiac').attr('style','visibility: visible; transition-delay: 0.7s;');
+        $('.calendar').attr('style','visibility: visible; transition-delay: 0.9s;');
+        $('.qa').attr('style','visibility: visible; transition-delay: 1.2s;');
         //$('#navBtn').attr('style', 'transform: translateX(0px) translateY(0px) rotate(0deg); transition: transform .42s;');
         $(lines[0]).attr('style', 'transform: translateX(0px) translateY(0px) rotate(0deg); transition: transform .42s;');
         $(lines[1]).attr('style', 'transform: translateX(0px) translateY(0px) rotate(0deg); transition: transform 1s;');

@@ -53,7 +53,8 @@ body {
         " .   .   .   .   .   .   .   .   .   .   .   . "
         " .   .   .   .   .   .   .   .   .   .   .   . "
         " .  ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr  . "
-        " .  ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr  . ";
+        " .  ico ico ico ico ico ico ico ico ico ico  . "
+        " .   .   .   .   .   .   .   .   .   .   .   . "
 }
 
 header {
@@ -76,7 +77,7 @@ header {
     align-content: center;
     min-width: 50px;
 }
-.about{
+.zodiac{
     display: grid;
     grid-area: abt;
     color: #fff;
@@ -85,7 +86,7 @@ header {
     align-content: center;
     min-width: 50px;
 }
-.product{
+.calendar{
     display: grid;
     grid-area: prt;
     color: #fff;
@@ -94,7 +95,7 @@ header {
     align-content: center;
     min-width: 50px;
 }
-.contact{
+.qa{
     display: grid;
     grid-area: cot;
     color: #fff;
@@ -289,9 +290,18 @@ header {
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-100px);
-    transition: transform 1s;
+    transition: transform 2s;
+    animation: aniCube 8s linear 3;
 }
   
+@keyframes aniCube {
+    0% { transform: rotateY(0deg) rotateX(40deg) scale3d(.4, .4, .4)}
+    50% { transform: rotateY(90deg) rotateX(90deg) scale3d(.6, .6, .6)}
+    100% { transform: rotateY(180deg) rotateX(180deg) scale3d(.8, .8, .8) }
+  }
+
+
+
 .cubeSurface {
     position: absolute;
     width: 200px;
@@ -395,29 +405,58 @@ header {
 .topPig    { background-image: url('../assets/images/pig.jpg');  opacity:0.9; }
 .bottomPig { background-image: url('../assets/images/pig1.jpg');     opacity:0.9; }
 
-
-
-
-
 footer{
     display: grid;
     grid-area: ftr;
-    background: #ccf;
+    background: #333;
+    color: #fff;
+    font-size: 1em;
+    justify-items: center;
 }
 
+.socialIcon {
+    display: grid;
+    grid-area: ico;
+    background: #333;
+    color: #fff;
+    justify-items: center;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-areas:
+    " . . . . . . twt fbk lkn . . . . . . ";
+}
+
+#twitter{
+    display: grid;
+    grid-area: twt;
+    color: #fff;
+    width: 28px;
+}
+
+#facebook{
+    display: grid;
+    grid-area: fbk;
+    color: #fff;
+    width: 28px;
+}
+
+#linkedin{
+    display: grid;
+    grid-area: lkn;
+    color: #fff;
+    width: 28px;
+}
 
 @media(max-width: 720px) 
 {
     header {
         grid-auto-rows: minmax(20px, 50px);
-        grid-auto-columns: minmax(250px, auto);
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
         "nbt hom abt" 
         "nbt prt cot";
     }
 
-    .home, .about, .product, .contact{
+    .home, .zodiac, .calendar, .qa{
         justify-items: left;
     }
 

@@ -410,14 +410,19 @@ footer{
 {
     header {
         grid-auto-rows: minmax(20px, 50px);
+        grid-auto-columns: minmax(250px, auto);
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
         "nbt hom abt" 
-        " .  prt cot";
+        "nbt prt cot";
     }
 
     .home, .about, .product, .contact{
-        justify-items: left;
+        justify-items: center;
+    }
+
+    #navBtn {
+        justify-items: center;
     }
 
     #rat {

@@ -116,10 +116,10 @@ function(){
 
 $(".home").click(function(){
   $('#gridCover').animate({
-    top: 200
+    top: '0%'
   }, 1000, 'swing');
   $('.sceneAll').animate({
-    top: 300
+    top: '10%'
   }, 1000, 'swing');
 });
 

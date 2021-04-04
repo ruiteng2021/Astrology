@@ -46,6 +46,10 @@ function moveCube(num) {
         break  
     }
 
+
+  // the rotation data setting is copied from section "Rotating the cube" in 
+  // websie https://3dtransforms.desandro.com/cube
+  
   let side = Math.floor(Math.random() * 6);
   if (side == 0) //front
     cube.setAttribute('style', 'transform: translateZ(-100px) rotateY(   0deg);');

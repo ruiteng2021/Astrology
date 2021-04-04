@@ -41,6 +41,9 @@ function moveCube(num) {
       case 11:
         cube = document.querySelector('.cubePig');
         break  
+      case 12:
+        cube = document.querySelector('.cubeAll');
+        break  
     }
 
   let side = Math.floor(Math.random() * 6);
@@ -103,3 +106,28 @@ function mouseOver() {
       $('#logoimg').css("animation", "none");
   });
 }
+
+$('.home').hover(function(){
+  $('.home').css("text-decoration", "underline");
+}, 
+function(){
+    $('.home').css("text-decoration", "none");
+});
+
+$(".home").click(function(){
+  $('#gridCover').animate({
+    top: 200
+  }, 1000, 'swing');
+  $('.sceneAll').animate({
+    top: 300
+  }, 1000, 'swing');
+});
+
+$("#gridCover").click(function(){
+  $('#gridCover').animate({
+    top: -500
+  }, 1000, 'swing');
+  $('.sceneAll').animate({
+    top: -500
+  }, 500, 'swing');
+});

@@ -5,6 +5,26 @@ body {
     width: 100%;
     font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
 }
+#gridCover {
+    position: fixed; 
+    display: block; 
+    width: 100%; 
+    height: 500px; 
+    top: -500px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 2;
+    cursor: pointer; 
+}
+.sceneAll{
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    top: -500px;
+    left: calc(50% - 100px);;
+    z-index: 2;
+}
 #grid {
     display: grid;
     background: #fff;
@@ -274,7 +294,7 @@ header {
     max-height: 200px;
 }
 
-.scene {
+.scene, .sceneAll {
     width: 200px;
     height: 200px;
     margin: 10px;
@@ -284,7 +304,7 @@ header {
 .cubeRat,.cubeOx,.cubeTiger,
 .cubeRabbit,.cubeDragon,.cubeSnake,
 .cubeHorse,.cubeSheep,.cubeMonkey,
-.cubeRooster,.cubeDog,.cubePig {
+.cubeRooster,.cubeDog,.cubePig,.cubeAll {
     width: 200px;
     height: 200px;
     position: relative;
@@ -404,6 +424,13 @@ header {
 .leftPig   { background-image: url('../assets/images/pig5.jpg');  opacity:0.9; }
 .topPig    { background-image: url('../assets/images/pig.jpg');  opacity:0.9; }
 .bottomPig { background-image: url('../assets/images/pig1.jpg');     opacity:0.9; }
+
+.frontAll  { background-image: url('../assets/images/rat.jpg');  opacity:0.9; }
+.rightAll  { background-image: url('../assets/images/ox.jpg');  opacity:0.9; }
+.backAll   { background-image: url('../assets/images/tiger.jpg');  opacity:0.9; }
+.leftAll   { background-image: url('../assets/images/rabbit.jpg');  opacity:0.9; }
+.topAll    { background-image: url('../assets/images/dragon.jpg');   opacity:0.9; }
+.bottomAll { background-image: url('../assets/images/snake.jpg');  opacity:0.9; }
 
 footer{
     display: grid;

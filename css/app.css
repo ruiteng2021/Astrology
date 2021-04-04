@@ -113,6 +113,7 @@ header {
     font-size: large;
     align-content: center;
     min-width: 50px;
+    cursor:default;
 }
 .calendar{
     display: grid;
@@ -122,6 +123,7 @@ header {
     font-size: large;
     align-content: center;
     min-width: 50px;
+    cursor:default;
 }
 .qa{
     display: grid;
@@ -131,6 +133,7 @@ header {
     font-size: large;
     align-content: center;
     min-width: 50px;
+    cursor:default;
 }
 
 
@@ -146,6 +149,10 @@ header {
     padding: 9px; 
     align-content: center;
 }
+
+    #navBtn:hover{
+        cursor: pointer;
+    }
     .line {
         width: 35px;
         height: 3px;
@@ -172,9 +179,9 @@ header {
         logo-rotate 1s linear 5;
 }
 
-/* #logo > img:hover{
-    animation: logo-rotateZ 2s linear infinite;
-} */
+#logo:hover{
+    cursor: pointer;
+}
 
 @keyframes logo-rotate {
     from    { transform: rotate(0); }

@@ -119,7 +119,7 @@ $(".home").click(function(){
     top: '0%'
   }, 1000, 'swing');
   $('.sceneAll').animate({
-    top: '10%'
+    top: '15%'
   }, 1000, 'swing');
 });
 
